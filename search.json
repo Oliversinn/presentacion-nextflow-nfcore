@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "presentacion.html#introducción",
+    "href": "presentacion.html#introducción",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Introducción",
+    "text": "Introducción\n\nBioinformático especializado en oncogenómica.\nExperiencia en sistemas de información para la salud (HIS).\nExperiencia en análisis de datos ómicos en cáncer.\nEnfoque: reproducibilidad y escalabilidad en análisis bioinformático."
+  },
+  {
+    "objectID": "presentacion.html#qué-es-una-pipeline",
+    "href": "presentacion.html#qué-es-una-pipeline",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "¿Qué es una pipeline?",
+    "text": "¿Qué es una pipeline?\n\nSecuencia de pasos para procesar y analizar datos.\nGarantiza reproducibilidad y automatización.\nEscalable a grandes volúmenes de datos.\n\n\nEn oncología, cada dataset puede tener miles de muestras."
+  },
+  {
+    "objectID": "presentacion.html#problemas-comunes-sin-pipelines",
+    "href": "presentacion.html#problemas-comunes-sin-pipelines",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Problemas comunes sin pipelines",
+    "text": "Problemas comunes sin pipelines\n\nProcesos manuales y propensos a errores.\nDificultad para reproducir resultados.\nEscasa portabilidad entre entornos.\nProblemas de escalabilidad.\nFalta de estandarización."
+  },
+  {
+    "objectID": "presentacion.html#qué-es-nextflow",
+    "href": "presentacion.html#qué-es-nextflow",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "¿Qué es Nextflow?",
+    "text": "¿Qué es Nextflow?\n\nGestor de flujos de trabajo (workflow manager).\nReproducible, portátil y escalable.\nCompatible con:\n\nDocker / Singularity\nHPC (SLURM, PBS)\nCloud (AWS, Google Cloud)"
+  },
+  {
+    "objectID": "presentacion.html#filosofía-de-nextflow",
+    "href": "presentacion.html#filosofía-de-nextflow",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Filosofía de Nextflow",
+    "text": "Filosofía de Nextflow\n\n“Write once, run anywhere”\n\n\nCódigo y datos versionados.\nEntornos aislados para evitar conflictos.\nEjecución paralela optimizada.\nEscalabilidad inteligente.\nModularidad y mantenibilidad.\nTransparencia y trazabilidad."
+  },
+  {
+    "objectID": "presentacion.html#qué-es-nf-core",
+    "href": "presentacion.html#qué-es-nf-core",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "¿Qué es nf-core?",
+    "text": "¿Qué es nf-core?\n\nComunidad que desarrolla pipelines bioinformáticas estandarizadas.\nBuenas prácticas + documentación clara.\nValidación continua (CI/CD)."
+  },
+  {
+    "objectID": "presentacion.html#ejemplos-en-oncología",
+    "href": "presentacion.html#ejemplos-en-oncología",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Ejemplos en oncología",
+    "text": "Ejemplos en oncología\n\nnf-core/sarek → Análisis de variantes somáticas y germinales.\nnf-core/rnaseq → Análisis de expresión génica.\nnf-core/scrnaseq → Transcriptómica de célula única."
+  },
+  {
+    "objectID": "presentacion.html#nf-coresarek",
+    "href": "presentacion.html#nf-coresarek",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "nf-core/sarek",
+    "text": "nf-core/sarek"
+  },
+  {
+    "objectID": "presentacion.html#caso-de-uso-sarek",
+    "href": "presentacion.html#caso-de-uso-sarek",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Caso de uso: Sarek",
+    "text": "Caso de uso: Sarek\n\nEntrada: FASTQ o BAM.\nProcesamiento: QC, alineamiento, llamado de variantes.\nSalida: Archivos VCF y reportes multiQC.\n\nBeneficios: - Reproducible en cualquier entorno. - Escalable a grandes cohortes."
+  },
+  {
+    "objectID": "presentacion.html#ejemplo-rápido",
+    "href": "presentacion.html#ejemplo-rápido",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Ejemplo rápido",
+    "text": "Ejemplo rápido\nComando\nnextflow run nf-core/sarek \\\n  --input samplesheet.csv \\\n  --genome GRCh38 \\\n  -profile docker\nSamplesheet\npatient,sex,status,sample,lane,fastq_1,fastq_2\npatient1,XX,0,normal_sample,lane_1,test_L001_1.fastq.gz,test_L001_2.fastq.gz\npatient1,XX,0,normal_sample,lane_2,test_L002_1.fastq.gz,test_L002_2.fastq.gz\npatient1,XX,0,normal_sample,lane_3,test_L003_1.fastq.gz,test_L003_2.fastq.gz\npatient1,XX,1,tumor_sample,lane_1,test2_L001_1.fastq.gz,test2_L001_2.fastq.gz\npatient1,XX,1,tumor_sample,lane_2,test2_L002_1.fastq.gz,test2_L002_2.fastq.gz\npatient1,XX,1,relapse_sample,lane_1,test3_L001_1.fastq.gz,test3_L001_2.fastq.gz"
+  },
+  {
+    "objectID": "presentacion.html#más-información",
+    "href": "presentacion.html#más-información",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Más información",
+    "text": "Más información\n\nhttps://nf-co.re\nIntroducción\nUso\nParametros\nSalidas\nResultados\nLanzamientos - Versions"
+  },
+  {
+    "objectID": "presentacion.html#pipelines",
+    "href": "presentacion.html#pipelines",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Pipelines",
+    "text": "Pipelines"
+  },
+  {
+    "objectID": "presentacion.html#contacto",
+    "href": "presentacion.html#contacto",
+    "title": "Automatizando el análisis de datos ómicos en cáncer: Introducción a Nextflow y nf-core",
+    "section": "Contacto",
+    "text": "Contacto\n\nhttps://www.linkedin.com/in/oliver-mazariegos/"
+  }
+]
